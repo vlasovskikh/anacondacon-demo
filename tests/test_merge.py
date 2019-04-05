@@ -11,7 +11,7 @@ class MergeTest(TestCase):
         self.assertRaises(ValueError, lambda: merge({'a': 1}, {'a': 2}))
 
     def test_merge_lists(self):
-        self.assertEqual(merge([1], [2, 3]), [1, 2, 3, 4])
+        self.assertEqual(merge([1], [2, 3]), [1, 2, 3])
         self.assertEqual(merge([[1, 2], [3]], [4]), [[1, 2], [3], 4])
 
     def test_merge_nested(self):
